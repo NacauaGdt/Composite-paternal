@@ -1,2 +1,2 @@
-# Composite paternal
- Papai designer composite
+# Composite-Pattern 
+ Repositório par aprendizado do Pattern Composite

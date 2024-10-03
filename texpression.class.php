@@ -1,17 +1,18 @@
 <?php
 
-//Classe TExpression
-//*Classe abstrata para gerenciar expressões
+/* Classe TExepression 
+*  Classe abstrata para gerenciar expressões
+*/
 
-abstract class TExpression {
-//Operadores logicos
-
+abstract class TExpression{
+// operadores lógicos
 const AND_OPERATOR = 'AND';
 const OR_OPERATOR = 'OR';
 
-//marca metodo dump como obrigatorio
+// marca método dump como obrigatório
 
 abstract public function dump();
 
 }
+
 ?>
