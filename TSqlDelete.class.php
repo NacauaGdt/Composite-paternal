@@ -1,32 +1,30 @@
 <?php
 
-//classe Delete
-//Essa classe provê meios paara manipulação de uma instrução de DELETE no BD
+/* Classe Delete
+* Essa classe provê meios para manipulação de de uma instrução de DELETE no BD
+*/
 
 final class TSqlDelete extends TSqlInstruction {
 
-    //metodo getInstruction()
-    //retorna a instrução de Delete em forma de string
-    
-    public function getInstruction(){
-
-        //momta a string do DELETE
+    /* Metodo getInstruction()
+    * retorna a instrução de Delete em forma de String
+    */
+    public function getInstruction()
+    {
+        // monta a string do DELETE
         $this->sql = "DELETE FROM {$this->entity}";
 
-        //retorna a clausula WHERE do objeto $this->criteria
-
+        // retorna a clausula WHERE do objeto $this->criteria
         if($this->criteria) {
-            if($expression){
-        }
+
+            $expression = $this->criteria->dump();
+            if ($expression)
+            {
                 $this->sql .= 'WHERE' . $expression;
+            }
+            return $this->sql;
+        }
     }
 
-    
-
-    return $this->sql;
 }
-}
-
-
-
-?>
+    ?>
